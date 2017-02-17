@@ -10,13 +10,15 @@ public class AllFields extends AbstractedTestClass {
     @Test
     public void setAllFields() {
         int qty = 2;
-        setName("Dan");
+        String name = "Dan";
+        
+        setName(name);
         addWhippedCream();
         addChocolateTopping();
         setQuantity(qty);
         clickPreviewOrderButton();
 
-        verifyNameOnPreview("Dan");
+        verifyNameOnPreview(name);
         verifyChocolateToppingOrderedOnPreview();
         verifyQuantityOnPreview(qty);
 
